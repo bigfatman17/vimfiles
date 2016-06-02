@@ -16,6 +16,7 @@ set guioptions-=L
 set number
 set ruler
 set laststatus=2
+set noshowmode
 
 set tabstop=4
 set shiftwidth=4
@@ -51,6 +52,10 @@ inoremap jk <esc>
 inoremap kj <esc>
 
 let g:airline_theme='powerlineish'
+let g:airline_left_sep=''
+let g:airline_left_alt_sep=''
+let g:airline_right_sep=''
+let g:airline_right_alt_sep=''
 
 set background=dark
 set t_Co=256
