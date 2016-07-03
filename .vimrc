@@ -54,11 +54,15 @@ let mapleader = ","
 inoremap jk <esc>
 inoremap kj <esc>
 
+" Airline
 let g:airline_theme='powerlineish'
 let g:airline_left_sep=''
 let g:airline_left_alt_sep=''
 let g:airline_right_sep=''
 let g:airline_right_alt_sep=''
+
+" Vaxe
+let g:vaxe_enable_airline_defaults=0 " basically, removes the small amount of data Vaxe puts on airline. Was causing problems.
 
 set background=dark
 set t_Co=256
