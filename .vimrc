@@ -64,7 +64,9 @@ let g:airline_right_alt_sep=''
 " Vaxe
 let g:vaxe_enable_airline_defaults=0 " basically, removes the small amount of data Vaxe puts on airline. Was causing problems.
 " easier omnicompletion
+set autowrite
 imap <tab><tab> <c-x><c-o>
+imap ;; <esc><c-w>kZZa;
 
 set background=dark
 set t_Co=256
