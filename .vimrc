@@ -68,12 +68,12 @@ let g:airline_right_alt_sep=''
 let g:vaxe_enable_airline_defaults=0 " basically, removes the small amount of data Vaxe puts on airline. Was causing problems.
 " easier omnicompletion
 set autowrite
-imap <tab><tab> <c-x><c-o>
-imap ;; <esc><c-w>kZZa;
+au FileType haxe imap <tab><tab> <c-x><c-o>
+au FileType haxe imap ;; <esc><c-w>kZZa;
 " auto imports - make sure to generate ctags first with vaxe#Ctags(), have
 " ctags installed, and have the Vaxe .ctags file from the git repo in ~
 " The .ctags file is also within my repository, just in case of a loss.
-nmap <F1> :execute vaxe#ImportClass()<CR>
+au FileType haxe nmap <F1> :execute vaxe#ImportClass()<CR>
 
 set background=dark
 set t_Co=256
