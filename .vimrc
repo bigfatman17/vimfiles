@@ -3,10 +3,12 @@ execute pathogen#infect()
 
 " NERDTree
 nnoremap <F4> :NERDTreeToggle<CR>
-nnoremap <F8> :TagbarToggle<CR>
 " a fix for NERDTree's weird characters, use unicode characters (tried
 " originally for airline, but should work here)
 set encoding=utf-8
+
+" Tagbar
+nnoremap <F8> :TagbarToggle<CR>
 
 filetype plugin indent on " auto filetype detect
 syntax on " highlight
