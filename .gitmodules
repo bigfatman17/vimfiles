@@ -13,3 +13,6 @@
 [submodule ".vim/bundle/vaxe"]
 	path = .vim/bundle/vaxe
 	url = https://github.com/jdonaldson/vaxe.git
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = https://github.com/majutsushi/tagbar.git
