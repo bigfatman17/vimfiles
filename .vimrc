@@ -64,7 +64,8 @@ let g:airline_left_alt_sep=''
 let g:airline_right_sep=''
 let g:airline_right_alt_sep=''
 
-" Vaxe
+" Vaxe - Syntastic (installed) and YouCompleteMe (not currently installed)
+" should work with Vaxe by default.
 " NOTE: in order to use this with Lime projects, the project.xml must be named
 " with a lowercase p! For example, Flixel automatically begins with it
 " capitalized. It must be renamed.
@@ -72,11 +73,21 @@ let g:vaxe_enable_airline_defaults=0 " basically, removes the small amount of da
 " easier omnicompletion
 set autowrite
 au FileType haxe imap <tab><tab> <c-x><c-o>
+" closes preview window if I hit semicolon twice
 au FileType haxe imap ;; <esc><c-w>kZZa;
 " auto imports - make sure to generate ctags first with vaxe#Ctags(), have
 " ctags installed, and have the Vaxe .ctags file from the git repo in ~
 " The .ctags file is also within my repository, just in case of a loss.
 au FileType haxe nmap <F1> :execute vaxe#ImportClass()<CR>
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 set background=dark
 set t_Co=256
