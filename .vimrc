@@ -80,8 +80,11 @@ au FileType haxe nmap <F1> :execute vaxe#ImportClass()<CR>
 " Syntastic
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" Syntastic was getting a bit annoying, so I decided to disable it by default
+" and bind it to a key
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
+nmap <F2> :SyntasticCheck<CR>
 
 set background=dark
 set t_Co=256
