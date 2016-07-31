@@ -1,5 +1,5 @@
 # vimfiles
-My Vim configuration.
+My Vim configuration for general programming use. Comes with Airline, Solarized, AutoComplPop, and snipMate.
   
 Installation
 
