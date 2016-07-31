@@ -1,14 +1,7 @@
 set nocompatible
 execute pathogen#infect()
 
-" NERDTree
-nnoremap <F4> :NERDTreeToggle<CR>
-" a fix for NERDTree's weird characters, use unicode characters (tried
-" originally for airline, but should work here)
 set encoding=utf-8
-
-" Tagbar
-nnoremap <F8> :TagbarToggle<CR>
 
 filetype plugin indent on " auto filetype detect
 syntax on " highlight
@@ -50,9 +43,6 @@ set gdefault
 " in visual mode, cursor can go anywhere
 set virtualedit+=block
 
-" leader key - my very own key to start something (I guess similar to Meta in Emacs)
-let mapleader = ","
-
 " cool way to get out of insert mode, just press j and k at the same time
 inoremap jk <esc>
 inoremap kj <esc>
@@ -63,23 +53,6 @@ let g:airline_left_sep=''
 let g:airline_left_alt_sep=''
 let g:airline_right_sep=''
 let g:airline_right_alt_sep=''
-
-" Vaxe - Syntastic (removed) and YouCompleteMe (not currently installed)
-" should work with Vaxe by default.
-" NOTE: in order to use this with Lime projects, the project.xml must be named
-" with a lowercase p! For example, Flixel automatically begins with it
-" capitalized. It must be renamed.
-let g:vaxe_enable_airline_defaults=0 " basically, removes the small amount of data Vaxe puts on airline. Was causing problems.
-" easier omnicompletion
-set autowrite
-" auto imports - make sure to generate ctags first with vaxe#Ctags(), have
-" ctags installed, and have the Vaxe .ctags file from the git repo in ~
-" The .ctags file is also within my repository, just in case of a loss.
-au FileType haxe nmap <F1> :execute vaxe#ImportClass()<CR>
-
-" Quickfix - the less cumbersome replacement of Syntastic
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost l* nested lwindow
 
 set background=dark
 set t_Co=256
