@@ -47,6 +47,9 @@ set virtualedit+=block
 inoremap jk <esc>
 inoremap kj <esc>
 
+" if you hit enter in normal mode, all highlighting is cleared
+nnoremap <CR> :noh<CR>
+
 " Airline
 let g:airline_theme='powerlineish'
 let g:airline_left_sep=''
