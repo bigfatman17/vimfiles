@@ -50,6 +50,15 @@ inoremap kj <esc>
 " if you hit enter in normal mode, all highlighting is cleared
 nnoremap <CR> :noh<CR>
 
+" Syntastic Settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+
 " Airline
 let g:airline_theme='powerlineish'
 let g:airline_left_sep=''
@@ -60,4 +69,4 @@ let g:airline_right_alt_sep=''
 set background=dark
 set t_Co=256
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme delek
