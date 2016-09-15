@@ -63,5 +63,8 @@ let g:airline_right_alt_sep=''
 
 set background=dark
 set t_Co=256
+set t_RV= " This, for some reason, fixed an xterm glitch where Vim would print random characters. Apparently, it's supposed to have something to
+" do with getting the terminal version, but I guess it has trouble finding it
+" with my xterm configuration.
 let g:solarized_termcolors=256
 colorscheme delek
