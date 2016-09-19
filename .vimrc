@@ -13,6 +13,7 @@ set guioptions-=r
 set guioptions-=L
 
 set number
+set rnu
 set ruler
 set laststatus=2
 set noshowmode
