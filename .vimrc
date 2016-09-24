@@ -70,7 +70,7 @@ function! Refactor()
     call inputrestore()
 endfunction
 nnoremap gr "zyiw:call Refactor()<cr>mq:silent! norm gd<cr>[{V%:s/<C-R>//<c-r>z/c<cr>
-nnoremap gR "zyiw:call Refactor()<cr>mq:silent! norm gd<cr>:%s/<C-R>//<c-r>z/c<cr>
+nnoremap gR "zyiw:call Refactor()<cr>mq:silent! norm gD<cr>:%s/<C-R>//<c-r>z/c<cr>
 
 set background=dark
 set t_Co=256
