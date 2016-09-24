@@ -72,6 +72,9 @@ endfunction
 nnoremap gr "zyiw:call Refactor()<cr>mq:silent! norm gd<cr>[{V%:s/<C-R>//<c-r>z/c<cr>
 nnoremap gR "zyiw:call Refactor()<cr>mq:silent! norm gD<cr>:%s/<C-R>//<c-r>z/c<cr>
 
+" Pasting hotkey
+set pastetoggle=cs
+
 set background=dark
 set t_Co=256
 set t_RV= " This, for some reason, fixed an xterm glitch where Vim would print random characters. Apparently, it's supposed to have something to
