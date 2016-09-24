@@ -62,6 +62,14 @@ let g:airline_left_alt_sep=''
 let g:airline_right_sep=''
 let g:airline_right_alt_sep=''
 
+" Variable refactorization
+function! Refactor()
+    call inputsave()
+    let @z=input("'" . @z . "' ? ")
+    call inputrestore()
+endfunction
+nnoremap gr "zyiw:call Refactor()<cr>mx:silent! norm gd<cr>[{V%:s/<C-R>//<c-r>z/c<cr>`x
+
 set background=dark
 set t_Co=256
 set t_RV= " This, for some reason, fixed an xterm glitch where Vim would print random characters. Apparently, it's supposed to have something to
