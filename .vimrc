@@ -63,12 +63,14 @@ let g:airline_right_sep=''
 let g:airline_right_alt_sep=''
 
 " Variable refactorization
+" Also creates a mark at q when started.
 function! Refactor()
     call inputsave()
     let @z=input("'" . @z . "' ? ")
     call inputrestore()
 endfunction
-nnoremap gr "zyiw:call Refactor()<cr>mx:silent! norm gd<cr>[{V%:s/<C-R>//<c-r>z/c<cr>`x
+nnoremap gr "zyiw:call Refactor()<cr>mq:silent! norm gd<cr>[{V%:s/<C-R>//<c-r>z/c<cr>
+nnoremap gR "zyiw:call Refactor()<cr>mq:silent! norm gd<cr>:%s/<C-R>//<c-r>z/c<cr>
 
 set background=dark
 set t_Co=256
