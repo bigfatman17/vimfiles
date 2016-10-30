@@ -11,6 +11,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'neomake/neomake'
 call plug#end()
 
 set encoding=utf-8
@@ -73,6 +74,9 @@ let g:airline_left_sep=''
 let g:airline_left_alt_sep=''
 let g:airline_right_sep=''
 let g:airline_right_alt_sep=''
+
+" Neomake on save
+autocmd! BufWritePost * Neomake!
 
 " Variable refactorization
 " Also creates a mark at q when started.
