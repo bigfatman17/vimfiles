@@ -1,5 +1,17 @@
 set nocompatible
-execute pathogen#infect()
+
+call plug#begin()
+Plug 'vim-scripts/AutoComplPop'
+Plug 'tomtom/tcomment_vim'
+Plug 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'ludovicchabant/vim-gutentags'
+call plug#end()
 
 set encoding=utf-8
 
