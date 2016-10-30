@@ -12,6 +12,8 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'neomake/neomake'
+Plug 'justinmk/vim-syntax-extra'
+Plug 'cocopon/iceberg.vim'
 call plug#end()
 
 set encoding=utf-8
@@ -97,4 +99,4 @@ set t_RV= " This, for some reason, fixed an xterm glitch where Vim would print r
 " do with getting the terminal version, but I guess it has trouble finding it
 " with my xterm configuration.
 let g:solarized_termcolors=256
-colorscheme delek
+colorscheme iceberg
