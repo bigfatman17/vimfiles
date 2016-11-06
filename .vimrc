@@ -14,6 +14,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'neomake/neomake'
 Plug 'justinmk/vim-syntax-extra'
 Plug 'cocopon/iceberg.vim'
+Plug 'KevinGoodsell/vim-csexact'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
 set encoding=utf-8
@@ -71,7 +73,7 @@ autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost l* nested cwindow
 
 " Airline
-let g:airline_theme='powerlineish'
+let g:airline_theme='solarized'
 let g:airline_left_sep=''
 let g:airline_left_alt_sep=''
 let g:airline_right_sep=''
@@ -99,4 +101,4 @@ set t_RV= " This, for some reason, fixed an xterm glitch where Vim would print r
 " do with getting the terminal version, but I guess it has trouble finding it
 " with my xterm configuration.
 let g:solarized_termcolors=256
-colorscheme iceberg
+colorscheme solarized8_dark
