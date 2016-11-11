@@ -91,6 +91,9 @@ function! Refactor()
 endfunction
 nnoremap gr "zyiw:call Refactor()<cr>mq:silent! norm gd<cr>[{V%:s/<C-R>//<c-r>z/c<cr>
 nnoremap gR "zyiw:call Refactor()<cr>mq:silent! norm gD<cr>:%s/<C-R>//<c-r>z/c<cr>
+" Line insertion on C-j and C-k
+nnoremap <silent><C-j> :set paste<CR>m`o<Esc>``:set nopaste<CR>
+nnoremap <silent><C-k> :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 " Pasting hotkey
 set pastetoggle=cs
