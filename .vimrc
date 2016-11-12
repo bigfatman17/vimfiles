@@ -13,9 +13,9 @@ Plug 'honza/vim-snippets'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'neomake/neomake'
 Plug 'justinmk/vim-syntax-extra'
-Plug 'cocopon/iceberg.vim'
 Plug 'KevinGoodsell/vim-csexact'
 Plug 'lifepillar/vim-solarized8'
+Plug 'ap/vim-buftabline'
 call plug#end()
 
 set encoding=utf-8
